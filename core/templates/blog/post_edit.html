@@ -2,9 +2,21 @@
 
 {% block content %}
     <h2>New post</h2>
-    <form method="POST" class="post-form">
+    <form method="POST" enctype="multipart/form-data" class="post-form">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-secondary">Save</button>
+        <p>
+            {{ form.title.label_tag }} {{ form.title }}
+        </p>
+        <p>
+            {{ form.text.label_tag }} {{ form.text }}
+        </p>
+        <p>
+            {{ form.image.label_tag }} {{ form.image }}
+        </p>
+        <p>
+            {{ form.image2.label_tag }} {{ form.image2 }}
+        </p>
+
+        <button type="submit" class="btn btn-secondary">Save</button>
     </form>
 {% endblock %}

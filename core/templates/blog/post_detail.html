@@ -15,8 +15,19 @@
             {{ post.published_date }}
         </time>
     {% endif %}
-
     <h2>{{ post.title }}</h2>
+
+<div class="post-images">
+    {% if post.image %}
+        <img src="{{ post.image.url }}" class="post-image">
+    {% endif %}
+
+    {% if post.image2 %}
+        <img src="{{ post.image2.url }}" class="post-image post-image-right">
+    {% endif %}
+</div>
+
+
     <p>{{ post.text|linebreaksbr }}</p>
 </article>
 {% endblock %}

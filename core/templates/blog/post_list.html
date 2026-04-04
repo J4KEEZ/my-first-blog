@@ -6,7 +6,7 @@
             <time class="date">
                 <aside class="actions">
                     <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
-                        {% include 'blog/icons/pencil-fill.svg' %}
+                        {% include './icons/pencil-fill.svg' %}
                     </a>
                 </aside>
 
@@ -15,6 +15,12 @@
                 </time>
             </time>
             <h2>{{ post.title }}</h2>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" class="post-image" alt="{{ post.title|default:'Blog image' }}">
+            {% endif %}
+            {% if post.image2 %}
+                <img src="{{ post.image2.url }}" class="post-image post-image-right" alt="{{ post.title|default:'Blog image' }}">
+            {% endif %}
             <p>{{ post.text|linebreaksbr }}</p>
         </article>
     {% endfor %}

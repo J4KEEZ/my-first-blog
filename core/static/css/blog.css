@@ -1,9 +1,9 @@
 
 .page-header {
-    background-color: #C25100;
+    background-color: #001502;
     margin-top: 0;
-    margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
+    margin-bottom: 35px;
+    padding: 25px 25px 25px 40px;
 }
 
 .page-header h1,
@@ -23,11 +23,21 @@ h4 {
 }
 
 .date {
-    color: #828282;
+    color: #001502;
 }
 
 .save {
     float: right;
+    font-size: 20px;
+    padding: 8px 18px;
+    border: 1px solid black;
+    background: white;
+    transition: all 0.2s ease;
+}
+
+.save:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .post-form textarea,
@@ -41,11 +51,15 @@ h4 {
     color: #ffffff;
     float: right;
     font-size: 26pt;
-    margin-right: 20px;
+    margin-right: 46px;
+
+    font-size: 26px;
+    padding: 10px 20px;
+    
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .post h2 a,
@@ -60,13 +74,52 @@ h4 {
 
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
+    color: #000000;
     background: none;
-    border-color: #C25100;
+    border-color: #000000;
     margin-left: 15px;
+    
+    font-size: 18px;
+    padding: 5px 15px;
 }
 
 .btn-secondary:hover {
-    color: #FFFFFF;
-    background-color: #C25100;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.top-menu svg {
+    width: 30px;
+    height: 50px;
+    transition: transform 0.2s ease;
+}
+.top-menu:hover svg {
+    transform: scale(1.2); rotate: (10deg);
+}
+
+button.save:active {
+    transform: scale(1.15);
+}
+.post-images {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.post-image {
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.post:first-of-type .post-image-right {
+    max-width: 585px;
+}
+.post:nth-of-type(2) .post-image-right {
+    max-width: 455px;
+}
+
+.post:nth-of-type(3) .post-image-right {
+    max-width: 600px;
 }
